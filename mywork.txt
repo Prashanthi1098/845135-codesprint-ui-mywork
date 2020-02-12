@@ -1,0 +1,12 @@
+My associate id:
+845135
+Other team members:
+845022,844987,844988,844830
+Team lead:
+845022
+My Role in team:
+1. To develop Place order and view order (JavaScript)
+My development files:
+1.PlaceOrder.html
+2.ViewOrder.html
+ 

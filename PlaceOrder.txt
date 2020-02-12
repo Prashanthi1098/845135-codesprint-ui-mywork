@@ -1,0 +1,64 @@
+function formdata()
+  
+  {
+  
+    var linr = document.getElementById('inr').value;
+	var lrfname = document.getElementById('rfname').value;
+	var lrlname = document.getElementById('rlname').value;
+	var laddress = document.getElementById('address').value;
+	var lcity = document.getElementById('city').value;
+	var lstate = document.getElementById('state').value;
+	var lcountry = document.getElementById('country').value;
+	var lpincode = document.getElementById('pincode').value;
+	var lbfname = document.getElementById('bfname').value;
+	var lblname = document.getElementById('blname').value;
+	var lphone = document.getElementById('phone').value;
+	var lemail = document.getElementById('email').value;
+	
+	
+	var allProducts = null;
+		if(sessionStorage.getItem('allProducts'))
+		{
+			allProducts = JSON.parse(sessionStorage.getItem('allProducts'));
+			var size = allProducts.length;
+			
+			allProducts[size] ={
+					     sinr: linr,
+					     srfname: lrfname,
+					     srlname: lrlname,
+					     saddress: laddress,
+					     scity: lcity,
+				             sstate: lstate,
+					     scountry: lcountry,
+					     spincode: lpincode,
+					     sbfname: lbfname,
+					     sblname: lblname,
+					     sphone: lphone,
+					     semail: lemail
+					};
+		}
+		else
+		{
+			allProducts = [{
+					sinr: linr,
+					srfname: lrfname,
+					srlname:lrlname,
+					saddress: laddress,
+					scity: lcity,
+					sstate: lstate,
+					scountry: lcountry,
+					spincode: lpincode,
+					sbfname: lbfname,
+					sblname: lblname,
+					sphone: lphone,
+					semail: lemail
+		                      }];
+	}
+	sessionStorage.setItem('allProducts',JSON.stringify(allProducts));
+	allProducts = JSON.parse(sessionStorage.getItem('allProducts'));
+
+	
+	return true;
+
+  }
+</script>

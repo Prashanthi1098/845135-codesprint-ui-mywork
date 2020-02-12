@@ -1,0 +1,15 @@
+
+<script>
+	var allProducts =JSON.parse(sessionStorage.getItem('allProducts'));
+        var size=allProducts.length;
+        document.getElementById('display').innerHTML='<thead><th>Buyers Name</th><th>Shipping Address</th><th>City</th><th>Amount</th><th>Phone.no</th></tr></thead>';
+        document.getElementById('display').innerHTML+='<tbody>';
+				  
+        for(i=0;i<size;i++)
+        {
+	       document.getElementById('display').innerHTML+='<tr><td>'+allProducts[i].sbfname+'</td><td>'+allProducts[i].saddress+'</td><td>'+allProducts[i].scity+'</td><td>'+allProducts[i].sinr+'</td><td>'+allProducts[i].sphone+'</td></tr>'
+                      
+	}
+        document.getElementById('display').innerHTML+='</tbody>';
+				  
+</script>
